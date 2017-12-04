@@ -39,44 +39,61 @@ public class add_regular_activity extends AppCompatActivity {
         Spinner Days = (Spinner) findViewById(R.id.Day);
 
         Spinner Pair = (Spinner) findViewById(R.id.Pair);
-/*
-        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, days);
 
-        ArrayAdapter<Byte> adapter3 = new ArrayAdapter<Byte>(this, android.R.layout.simple_spinner_item, pairs);
-
-        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        Days.setAdapter(adapter1);
-
-        adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        Pair.setAdapter(adapter3);
-        */
-
-       /* ArrayAdapter<?> adapter1 =
-                ArrayAdapter.createFromResource(this, R.array.animals, android.R.layout.simple_spinner_item);
+        // адаптер
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, days);
+        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<Byte> adapter1 = new ArrayAdapter<Byte>(this, android.R.layout.simple_spinner_item, pairs);
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        Days.setAdapter(adapter1);
-        */
-        String selected = Days.getSelectedItem().toString();
-        Toast.makeText(getApplicationContext(), selected, Toast.LENGTH_SHORT).show();
+        Pair.setAdapter(adapter1);
+        Days.setAdapter(adapter2);
+        // заголовок
+        Days.setPrompt("Title");
+        // выделяем элемент
+        Days.setSelection(0);
+        // устанавливаем обработчик нажатия
+        Days.setOnItemSelectedListener(new OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view,
+                                       int position, long id) {
+                // показываем позиция нажатого элемента
+                Toast.makeText(getBaseContext(), "Position = " + position, Toast.LENGTH_SHORT).show();
+            }
 
-/*
-    Days.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-        public void onItemSelected(AdapterView<?> parent,
-                View itemSelected, int selectedItemPosition, long selectedId) {
+            @Override
+            public void onNothingSelected(AdapterView<?> arg0) {
+            }
+        });
 
-            String[] choose = getResources().getStringArray(R.array.animals);
-            Toast toast = Toast.makeText(getApplicationContext(),
-                    "Ваш выбор: " + choose[selectedItemPosition], Toast.LENGTH_SHORT);
-            toast.show();
-        }
-    public void onNothingSelected(AdapterView<?> parent) {
+        Pair.setOnItemSelectedListener(new OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view,
+                                       int position, long id) {
+                // показываем позиция нажатого элемента
+                Toast.makeText(getBaseContext(), "Position = " + position, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> arg0) {
+
+            }
+        });
     }
-});
-
 }
 
-*/
+
+
+
+
+
+
+
+
+
+
+
+
 
 //    public void onClick(View v) {
 //
@@ -129,8 +146,8 @@ public class add_regular_activity extends AppCompatActivity {
 //}
 
 
-    }
-}
+
+
 
 
 
