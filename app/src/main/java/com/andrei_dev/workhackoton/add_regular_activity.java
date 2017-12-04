@@ -84,7 +84,7 @@ public class add_regular_activity extends AppCompatActivity {
 //
 //        switch (v.getId()) {
 //
-//            case R.id.btnAdd:
+//            case R.id.but_add:
 //                contentValues.put(DBHelper.KEY_DAY, day);
 //                contentValues.put(DBHelper.KEY_SUBJECT, subject);
 //                contentValues.put(DBHelper.KEY_PAIR, pair);
@@ -119,9 +119,9 @@ public class add_regular_activity extends AppCompatActivity {
 //        dbHelper.close();
 //    }
 //}
-
-
-
+//
+//
+//
 
 
 
