@@ -49,6 +49,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="@android:color/holo_blue_dark"
+        android:onClick="onClick"
         android:text="add regular schedule"
         android:textSize="18sp"
         android:textStyle="bold"

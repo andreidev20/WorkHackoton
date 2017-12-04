@@ -21,14 +21,14 @@
 
             <Spinner
                 android:id="@+id/Day"
-                android:layout_width="65dp"
+                android:layout_width="15dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1" />
 
 
             <Spinner
                 android:id="@+id/Pair"
-                android:layout_width="23dp"
+                android:layout_width="15dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1" />
 
@@ -40,16 +40,19 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Название предмета" />
+            android:text="Название предмета"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/but_add"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:drawable/editbox_dropdown_dark_frame"
-            android:backgroundTint="@android:color/background_light"
+            android:backgroundTint="@android:color/holo_blue_light"
             android:text="Добавить"
-            android:textColor="@android:color/background_dark"
-            android:textSize="16sp" />
+            android:textColor="@android:color/background_light"
+            android:textSize="16sp"
+            android:textStyle="bold" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
