@@ -46,6 +46,10 @@
             android:id="@+id/but_add"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Добавить" />
+            android:background="@android:drawable/editbox_dropdown_dark_frame"
+            android:backgroundTint="@android:color/background_light"
+            android:text="Добавить"
+            android:textColor="@android:color/background_dark"
+            android:textSize="16sp" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
