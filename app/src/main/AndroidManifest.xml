@@ -19,7 +19,8 @@
         <activity
             android:name=".add_regular_schedule"
             android:label="@string/title_activity_add_regular_schedule"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".add_regular_activity"></activity>
     </application>
 
 </manifest>

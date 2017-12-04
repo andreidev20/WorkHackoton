@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.andrei_dev.workhackoton.add_regular_activity">
+
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/Day"
+                android:layout_width="166dp"
+                android:layout_height="36dp"
+                android:layout_weight="1" />
+            <string-array name= "">
+                <item>Понедельник</item>
+                <item>Вторник</item>
+                <item>Среда</item>
+                <item>Четверг</item>
+                <item>Пятница</item>
+                <item>Суббота</item>
+            </string-array>
+
+
+            <Spinner
+                android:id="@+id/Subject"
+                android:layout_width="145dp"
+                android:layout_height="37dp"
+                android:layout_weight="1" />
+
+            <Spinner
+                android:id="@+id/Pair"
+                android:layout_width="23dp"
+                android:layout_height="37dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
