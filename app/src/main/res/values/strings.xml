@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">WorkHackoton</string>
+    <string name="title_activity_add_regular_schedule">add_regular_schedule</string>
 </resources>
