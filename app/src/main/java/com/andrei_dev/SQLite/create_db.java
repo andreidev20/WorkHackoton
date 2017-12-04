@@ -5,6 +5,8 @@ package com.andrei_dev.SQLite;
  */
 
 public class create_db {
-    DBHelper dbHelper;
+
+
+
 
 }
