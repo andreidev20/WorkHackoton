@@ -16,6 +16,7 @@ import android.widget.Spinner;
 
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.andrei_dev.SQLite.DBHelper;
 
@@ -33,12 +34,12 @@ public class add_regular_activity extends AppCompatActivity {
         setContentView(R.layout.activity_add_regular_activity);
 
         dbHelper = new DBHelper(this);
-        selection = (TextView) findViewById(R.id.selection);
+
 
         Spinner Days = (Spinner) findViewById(R.id.Day);
 
         Spinner Pair = (Spinner) findViewById(R.id.Pair);
-
+/*
         ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, days);
 
         ArrayAdapter<Byte> adapter3 = new ArrayAdapter<Byte>(this, android.R.layout.simple_spinner_item, pairs);
@@ -48,27 +49,34 @@ public class add_regular_activity extends AppCompatActivity {
 
         adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         Pair.setAdapter(adapter3);
+        */
+
+       /* ArrayAdapter<?> adapter1 =
+                ArrayAdapter.createFromResource(this, R.array.animals, android.R.layout.simple_spinner_item);
+        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        Days.setAdapter(adapter1);
+        */
+        String selected = Days.getSelectedItem().toString();
+        Toast.makeText(getApplicationContext(), selected, Toast.LENGTH_SHORT).show();
+
+/*
+    Days.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        public void onItemSelected(AdapterView<?> parent,
+                View itemSelected, int selectedItemPosition, long selectedId) {
+
+            String[] choose = getResources().getStringArray(R.array.animals);
+            Toast toast = Toast.makeText(getApplicationContext(),
+                    "Ваш выбор: " + choose[selectedItemPosition], Toast.LENGTH_SHORT);
+            toast.show();
+        }
+    public void onNothingSelected(AdapterView<?> parent) {
     }
-    OnItemSelectedListener itemSelectedListener = new OnItemSelectedListener() {
-        @Override
-        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-            // Получаем выбранный объект
-            String item = (String)parent.getItemAtPosition(position);
-            selection.setText(item);
-        }
-
-        @Override
-        public void onNothingSelected(AdapterView<?> parent) {
-
-        }
-    };
-        spinner.setOnItemSelectedListener(itemSelectedListener);
-}
+});
 
 }
 
-
+*/
 
 //    public void onClick(View v) {
 //
@@ -121,7 +129,8 @@ public class add_regular_activity extends AppCompatActivity {
 //}
 
 
-
+    }
+}
 
 
 
