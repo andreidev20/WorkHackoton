@@ -23,14 +23,6 @@
                 android:layout_width="166dp"
                 android:layout_height="36dp"
                 android:layout_weight="1" />
-            <string-array name= "">
-                <item>Понедельник</item>
-                <item>Вторник</item>
-                <item>Среда</item>
-                <item>Четверг</item>
-                <item>Пятница</item>
-                <item>Суббота</item>
-            </string-array>
 
 
             <Spinner
